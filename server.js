@@ -6,7 +6,6 @@ const slow = require('koa-slow')
 const cors = require('koa2-cors')
 const { getRandomMessage } = require('./RandMess/index')
 
-    // 'origin: "https://rail-g.github.io"'
 
 koa.use(koaBody({
     urlencoded: true,
@@ -14,11 +13,11 @@ koa.use(koaBody({
 }))
 
 koa.use(cors({
-    origin: '*'
+    origin: 'https://rail-g.github.io'
 }))
 
 koa.use(slow({
-    delay: 5000
+    delay: 1000
 }))
 
 koa.use((ctx) => {
